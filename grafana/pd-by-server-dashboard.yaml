@@ -147,6 +147,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric is derived from the *.*.throughput metric collected from each PingDirectory instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -229,8 +230,7 @@ spec:
               "expr": "throughput{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}-{{operation}}",
-              "refId": "A",
-              "description": "This metric got transformed from *.*.throughput metric collected from PingDirectory instance."
+              "refId": "A"
             }
           ],
           "title": "Throughput by Operation and Server",
@@ -241,6 +241,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric is derived from the *.*.throughput metric collected from each PingDirectory instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -323,8 +324,7 @@ spec:
               "expr": "sum by (instance) (throughput{k8s_cluster_name=~\"$cluster_name\"})",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A",
-              "description": "This metric got transformed from *.*.throughput metric collected from PingDirectory instance."
+              "refId": "A"
             }
           ],
           "title": "Throughput by Server",
@@ -335,6 +335,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric is derived from the *.*.response-time metric collected from each PingDirectory instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -420,8 +421,7 @@ spec:
               "expr": "response_time{k8s_cluster_name=~\"$cluster_name\"} > 0",
               "interval": "",
               "legendFormat": "{{instance}}-{{operation}}",
-              "refId": "A",
-              "description": "This metric got transformed from *.*.response-time metric collected from PingDirectory instance."
+              "refId": "A"
             }
           ],
           "title": "Average Latency by Operation and Server",
@@ -432,6 +432,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric is derived from the *.*.response-time metric collected from each PingDirectory instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -514,8 +515,7 @@ spec:
               "expr": "avg by (instance) (response_time{k8s_cluster_name=~\"$cluster_name\"} > 0)",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A",
-              "description": "This metric got transformed from *.*.response-time metric collected from PingDirectory instance."
+              "refId": "A"
             }
           ],
           "title": "Average Operation Latency by Server",
@@ -526,6 +526,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric got transformed from *.garbage-collection-live-mbytes metric collected from PingDirectory instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -608,8 +609,7 @@ spec:
               "expr": "sum by (instance) (garbage_collection_live_megabytes{k8s_cluster_name=~\"$cluster_name\"})",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A",
-              "description": "This metric got transformed from *.garbage-collection-live-mbytes metric collected from PingDirectory instance."
+              "refId": "A"
             }
           ],
           "title": "GC Live Megabytes by Server",
@@ -620,6 +620,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric got transformed from *.*.*.garbage-collections metric collected from PingDirectory instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -702,8 +703,7 @@ spec:
               "expr": "sum by (gcType, size, cause, instance) (rate(garbage_collections{k8s_cluster_name=~\"$cluster_name\"}[1m]))",
               "interval": "",
               "legendFormat": "{{instance}}-{{gcType}}-{{size}}-{{cause}}",
-              "refId": "A",
-              "description": "This metric got transformed from *.*.*.garbage-collections metric collected from PingDirectory instance."
+              "refId": "A"
             }
           ],
           "title": "Garbage Collection Rate by Server",

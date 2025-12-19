@@ -188,6 +188,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric is derived from *.*.throughput metric collected from each PingDirectory instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -270,8 +271,7 @@ spec:
               "expr": "sum by (operation) (throughput{k8s_cluster_name=~\"$cluster_name\"})",
               "interval": "",
               "legendFormat": "{{operation}}",
-              "refId": "A",
-              "description": "This metric got transformed from *.*.throughput metric collected from PingDirectory instance."
+              "refId": "A"
             }
           ],
           "title": "Throughput by Operation",
@@ -282,6 +282,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric is derived from *.*.throughput metric collected from each PingDirectory instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -364,8 +365,7 @@ spec:
               "expr": "sum(throughput{k8s_cluster_name=~\"$cluster_name\"})",
               "interval": "",
               "legendFormat": "Throughput",
-              "refId": "A",
-              "description": "This metric got transformed from *.*.throughput metric collected from PingDirectory instance."
+              "refId": "A"
             }
           ],
           "title": "Overall Operation Throughput",
@@ -376,6 +376,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric is derived from *.*.response-time metric collected from each PingDirectory instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -458,8 +459,7 @@ spec:
               "expr": "avg by (operation) (response_time{k8s_cluster_name=~\"$cluster_name\"} > 0)",
               "interval": "",
               "legendFormat": "{{operation}}",
-              "refId": "A",
-              "description": "This metric got transformed from *.*.response-time metric collected from PingDirectory instance."
+              "refId": "A"
             }
           ],
           "title": "Average Latency by Operation",
@@ -470,6 +470,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric is derived from *.*.response-time metric collected from each PingDirectory instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -552,8 +553,7 @@ spec:
               "expr": "avg((response_time{k8s_cluster_name=~\"$cluster_name\"} > 0))",
               "interval": "",
               "legendFormat": "",
-              "refId": "A",
-              "description": "This metric got transformed from *.*.response-time metric collected from PingDirectory instance."
+              "refId": "A"
             }
           ],
           "title": "Overall Average Operation Latency",
@@ -564,6 +564,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric got transformed from *.*.*.garbage-collections metric collected from PingDirectory instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -646,8 +647,7 @@ spec:
               "expr": "sum by (gcType, size, cause) (rate(garbage_collections{k8s_cluster_name=~\"$cluster_name\"}[1m]))",
               "interval": "",
               "legendFormat": "{{gcType}}-{{size}}-{{cause}}",
-              "refId": "A",
-              "description": "This metric got transformed from *.*.*.garbage-collections metric collected from PingDirectory instance."
+              "refId": "A"
             }
           ],
           "title": "Garbage Collection Rate",
@@ -658,6 +658,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric got transformed from `^dc=(.*)_dc=(.*)\\.replica(.*)` metric collected from PingDirectory instance. For more details, see https://docs.pingidentity.com/pingdirectory/11.0/pingdirectory_server_administration_guide/pd_ds_summary_replica_monitor_info.html",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -740,8 +741,7 @@ spec:
               "expr": "replica_backlog {k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A",
-              "description": "This metric got transformed from `^dc=(.*)_dc=(.*)\\.replica(.*)` metric collected from PingDirectory instance. For more details, see https://docs.pingidentity.com/pingdirectory/11.0/pingdirectory_server_administration_guide/pd_ds_summary_replica_monitor_info.html"
+              "refId": "A"
             }
           ],
           "title": "Replication Backlog",
@@ -752,6 +752,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric got transformed from *.backend-entry-count metric collected from PingDirectory instance. For more details, see https://docs.pingidentity.com/pingdirectory/11.0/pingdirectory_server_administration_guide/pd_ds_monitor_soft_deletes.html",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -834,8 +835,7 @@ spec:
               "expr": "avg by (backendID) (backend_entry_count{k8s_cluster_name=~\"$cluster_name\"})",
               "interval": "",
               "legendFormat": "{{backendID}}",
-              "refId": "A",
-              "description": "This metric got transformed from *.backend-entry-count metric collected from PingDirectory instance. For more details, see https://docs.pingidentity.com/pingdirectory/11.0/pingdirectory_server_administration_guide/pd_ds_monitor_soft_deletes.html"
+              "refId": "A"
             }
           ],
           "title": "Average Entry Count by Backend",
@@ -846,6 +846,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This metric got transformed from *.garbage-collection-live-mbytes metric collected from PingDirectory instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -928,8 +929,7 @@ spec:
               "expr": "avg by (region) (garbage_collection_live_megabytes{k8s_cluster_name=~\"$cluster_name\"})",
               "interval": "",
               "legendFormat": "{{region}}",
-              "refId": "A",
-              "description": "This metric got transformed from *.garbage-collection-live-mbytes metric collected from PingDirectory instance."
+              "refId": "A"
             }
           ],
           "title": "Average GC Live Megabytes by Region",

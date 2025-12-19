@@ -236,6 +236,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This panel shows the 90th percentile of response time across all PingAccess servers in the selected cluster(s).\\n\\nThis metric is derived from the .response.time.statistics.90.percentile metric collected from each PingAccess instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -319,8 +320,7 @@ spec:
               "interval": "",
               "intervalFactor": 1,
               "legendFormat": "{{instance}}",
-              "refId": "A",
-              "description": "This metric got transformed from .response.time.statistics.90.percentile metric collected from PingAccess instance."
+              "refId": "A"
             }
           ],
           "title": "Response Time 90 Percentile",
@@ -331,6 +331,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This panel shows the mean response time across all PingAccess servers in the selected cluster(s).\\n\\nThis metric is derived from the .response.time.statistics.mean metric collected from each PingAccess instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -413,8 +414,7 @@ spec:
               "expr": "metric_pingaccess_response_time_statistics_mean{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A",
-              "description": "This metric got transformed from .response.time.statistics.mean metric collected from PingAccess instance."
+              "refId": "A"
             }
           ],
           "title": "Response Time Mean",
@@ -425,6 +425,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This panel shows the 90th percentile of response concurrency across all PingAccess servers in the selected cluster(s).\\n\\nThis metric is derived from the .response.concurrency.statistics.90.percentile metric collected from each PingAccess instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -507,8 +508,7 @@ spec:
               "expr": "metric_pingaccess_response_concurrency_statistics_90_percentile{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A",
-              "description": "This metric got transformed from .response.concurrency.statistics.90.percentile metric collected from PingAccess instance."
+              "refId": "A"
             }
           ],
           "title": "Response Concurrency 90 Percentile",
@@ -519,6 +519,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This panel shows the mean of response concurrency across all PingAccess servers in the selected cluster(s).\\n\\nThis metric is derived from the .response.concurrency.statistics.mean metric collected from each PingAccess instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -601,8 +602,7 @@ spec:
               "expr": "metric_pingaccess_response_concurrency_statistics_mean{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A",
-              "description": "This metric got transformed from .response.concurrency.statistics.mean metric collected from PingAccess instance."
+              "refId": "A"
             }
           ],
           "title": "Response Concurrency Mean",
@@ -613,6 +613,7 @@ spec:
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "description": "This panel shows the total number of requests across all PingAccess servers in the selected cluster(s).\\n\\nThis metric is derived from the .response.statistics.count metric collected from each PingAccess instance.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -695,8 +696,7 @@ spec:
               "expr": "metric_pingaccess_response_statistics_count{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A",
-              "description": "This metric got transformed from .response.statistics.count metric collected from PingAccess instance."
+              "refId": "A"
             }
           ],
           "title": "Requests",
