@@ -229,7 +229,8 @@ spec:
               "expr": "throughput{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}-{{operation}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from *.*.throughput metric collected from PingDirectory instance."
             }
           ],
           "title": "Throughput by Operation and Server",
@@ -322,7 +323,8 @@ spec:
               "expr": "sum by (instance) (throughput{k8s_cluster_name=~\"$cluster_name\"})",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from *.*.throughput metric collected from PingDirectory instance."
             }
           ],
           "title": "Throughput by Server",
@@ -418,7 +420,8 @@ spec:
               "expr": "response_time{k8s_cluster_name=~\"$cluster_name\"} > 0",
               "interval": "",
               "legendFormat": "{{instance}}-{{operation}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from *.*.response-time metric collected from PingDirectory instance."
             }
           ],
           "title": "Average Latency by Operation and Server",
@@ -511,7 +514,8 @@ spec:
               "expr": "avg by (instance) (response_time{k8s_cluster_name=~\"$cluster_name\"} > 0)",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from *.*.response-time metric collected from PingDirectory instance."
             }
           ],
           "title": "Average Operation Latency by Server",
@@ -604,7 +608,8 @@ spec:
               "expr": "sum by (instance) (garbage_collection_live_megabytes{k8s_cluster_name=~\"$cluster_name\"})",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from *.garbage-collection-live-mbytes metric collected from PingDirectory instance."
             }
           ],
           "title": "GC Live Megabytes by Server",
@@ -697,7 +702,8 @@ spec:
               "expr": "sum by (gcType, size, cause, instance) (rate(garbage_collections{k8s_cluster_name=~\"$cluster_name\"}[1m]))",
               "interval": "",
               "legendFormat": "{{instance}}-{{gcType}}-{{size}}-{{cause}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from *.*.*.garbage-collections metric collected from PingDirectory instance."
             }
           ],
           "title": "Garbage Collection Rate by Server",

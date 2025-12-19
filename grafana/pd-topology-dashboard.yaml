@@ -270,7 +270,8 @@ spec:
               "expr": "sum by (operation) (throughput{k8s_cluster_name=~\"$cluster_name\"})",
               "interval": "",
               "legendFormat": "{{operation}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from *.*.throughput metric collected from PingDirectory instance."
             }
           ],
           "title": "Throughput by Operation",
@@ -363,7 +364,8 @@ spec:
               "expr": "sum(throughput{k8s_cluster_name=~\"$cluster_name\"})",
               "interval": "",
               "legendFormat": "Throughput",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from *.*.throughput metric collected from PingDirectory instance."
             }
           ],
           "title": "Overall Operation Throughput",
@@ -456,7 +458,8 @@ spec:
               "expr": "avg by (operation) (response_time{k8s_cluster_name=~\"$cluster_name\"} > 0)",
               "interval": "",
               "legendFormat": "{{operation}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from *.*.response-time metric collected from PingDirectory instance."
             }
           ],
           "title": "Average Latency by Operation",
@@ -549,7 +552,8 @@ spec:
               "expr": "avg((response_time{k8s_cluster_name=~\"$cluster_name\"} > 0))",
               "interval": "",
               "legendFormat": "",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from *.*.response-time metric collected from PingDirectory instance."
             }
           ],
           "title": "Overall Average Operation Latency",
@@ -642,7 +646,8 @@ spec:
               "expr": "sum by (gcType, size, cause) (rate(garbage_collections{k8s_cluster_name=~\"$cluster_name\"}[1m]))",
               "interval": "",
               "legendFormat": "{{gcType}}-{{size}}-{{cause}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from *.*.*.garbage-collections metric collected from PingDirectory instance."
             }
           ],
           "title": "Garbage Collection Rate",
@@ -735,7 +740,8 @@ spec:
               "expr": "replica_backlog {k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from `^dc=(.*)_dc=(.*)\\.replica(.*)` metric collected from PingDirectory instance. For more details, see https://docs.pingidentity.com/pingdirectory/11.0/pingdirectory_server_administration_guide/pd_ds_summary_replica_monitor_info.html"
             }
           ],
           "title": "Replication Backlog",
@@ -828,7 +834,8 @@ spec:
               "expr": "avg by (backendID) (backend_entry_count{k8s_cluster_name=~\"$cluster_name\"})",
               "interval": "",
               "legendFormat": "{{backendID}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from *.backend-entry-count metric collected from PingDirectory instance. For more details, see https://docs.pingidentity.com/pingdirectory/11.0/pingdirectory_server_administration_guide/pd_ds_monitor_soft_deletes.html"
             }
           ],
           "title": "Average Entry Count by Backend",
@@ -921,7 +928,8 @@ spec:
               "expr": "avg by (region) (garbage_collection_live_megabytes{k8s_cluster_name=~\"$cluster_name\"})",
               "interval": "",
               "legendFormat": "{{region}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from *.garbage-collection-live-mbytes metric collected from PingDirectory instance."
             }
           ],
           "title": "Average GC Live Megabytes by Region",

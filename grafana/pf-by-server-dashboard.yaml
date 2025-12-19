@@ -35,7 +35,20 @@ spec:
       "fiscalYearStartMonth": 0,
       "graphTooltip": 0,
       "iteration": 1669984015792,
-      "links": [],
+      "links": [
+        {
+          "asDropdown": false,
+          "icon": "external link",
+          "includeVars": false,
+          "keepTime": false,
+          "tags": [],
+          "targetBlank": true,
+          "title": "PF Metric Doc Link",
+          "tooltip": "",
+          "type": "link",
+          "url": "https://docs.pingidentity.com/pingfederate/13.0/pingfederate_monitoring_guide/pf_liveliness_responsiveness.html#heartbeat-endpoint:~:text=and%20responsiveness.-,Server%20metrics,-Description"
+        }
+      ],
       "liveNow": false,
       "panels": [
         {
@@ -320,7 +333,8 @@ spec:
               "expr": "metric_pingfederate_total_transactions{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from total.transactions metric collected from PingFederate instance."
             }
           ],
           "title": "Total transactions",
@@ -421,7 +435,8 @@ spec:
               "expr": "metric_pingfederate_total_failed_transactions{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from total.failed.transactions metric collected from PingFederate instance."
             }
           ],
           "title": "Total failed transactions",
@@ -520,7 +535,8 @@ spec:
               "expr": "metric_pingfederate_response_time_statistics_mean{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from response.time.statistics.mean metric collected from PingFederate instance."
             }
           ],
           "title": "Response Time Statistics Mean",
@@ -613,7 +629,8 @@ spec:
               "expr": "rate(metric_pingfederate_response_time_statistics_90_percentile{k8s_cluster_name=~\"$cluster_name\"}[5m])",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from response.time.statistics.90.percentile metric collected from PingFederate instance."
             }
           ],
           "title": "Response Time 90 Percentile",
@@ -706,7 +723,8 @@ spec:
               "expr": "metric_pingfederate_response_concurrency_statistics_mean{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from response.concurrency.statistics.mean metric collected from PingFederate instance."
             }
           ],
           "title": "Response Concurrency Mean",
@@ -799,7 +817,8 @@ spec:
               "expr": "metric_pingfederate_response_concurrency_statistics_90_percentile{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from response.concurrency.statistics.90.percentile metric collected from PingFederate instance."
             }
           ],
           "title": "Response Concurrency 90 Percentile",
@@ -892,7 +911,8 @@ spec:
               "expr": "metric_pingfederate_session_state_attribute_map_size{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from session.state.attribute.map.size metric collected from PingFederate instance."
             }
           ],
           "title": "Session State Attribute Map Size",
@@ -985,7 +1005,8 @@ spec:
               "expr": "metric_pingfederate_response_statistics_count{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from response.statistics.count metric collected from PingFederate instance."
             }
           ],
           "title": "HTTP Requests",
@@ -1084,7 +1105,8 @@ spec:
               "expr": "metric_pingfederate_sp_session_registry_session_map_size{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from session.registry.session.map.size metric collected from PingFederate instance."
             }
           ],
           "title": "SP Session Registry Map Size",
@@ -1177,7 +1199,8 @@ spec:
               "expr": "metric_pingfederate_idp_session_registry_session_map_size{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from idp.session.registry.session.map.size metric collected from PingFederate instance."
             }
           ],
           "title": "IDP Session Registry Map Size",

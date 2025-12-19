@@ -319,7 +319,8 @@ spec:
               "interval": "",
               "intervalFactor": 1,
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from .response.time.statistics.90.percentile metric collected from PingAccess instance."
             }
           ],
           "title": "Response Time 90 Percentile",
@@ -412,7 +413,8 @@ spec:
               "expr": "metric_pingaccess_response_time_statistics_mean{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from .response.time.statistics.mean metric collected from PingAccess instance."
             }
           ],
           "title": "Response Time Mean",
@@ -505,7 +507,8 @@ spec:
               "expr": "metric_pingaccess_response_concurrency_statistics_90_percentile{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from .response.concurrency.statistics.90.percentile metric collected from PingAccess instance."
             }
           ],
           "title": "Response Concurrency 90 Percentile",
@@ -598,7 +601,8 @@ spec:
               "expr": "metric_pingaccess_response_concurrency_statistics_mean{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from .response.concurrency.statistics.mean metric collected from PingAccess instance."
             }
           ],
           "title": "Response Concurrency Mean",
@@ -691,7 +695,8 @@ spec:
               "expr": "metric_pingaccess_response_statistics_count{k8s_cluster_name=~\"$cluster_name\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
-              "refId": "A"
+              "refId": "A",
+              "description": "This metric got transformed from .response.statistics.count metric collected from PingAccess instance."
             }
           ],
           "title": "Requests",
