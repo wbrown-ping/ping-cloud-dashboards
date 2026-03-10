@@ -3,6 +3,9 @@ apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDashboard
 metadata:
   name: prometheus-metrics
+  annotations:
+    argocd.argoproj.io/sync-options: ServerSideApply=true,Replace=true
+
 spec:
   folder: "Monitoring"
   resyncPeriod: 30m
