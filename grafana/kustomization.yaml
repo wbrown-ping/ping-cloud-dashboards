@@ -20,3 +20,7 @@ resources:
   - karpenter-capacity-dashboard.yaml
   - volume-autoscaler.yaml
   - prometheus-monitoring.yaml
+
+
+transformers:
+  - annotationTransformer.yaml
