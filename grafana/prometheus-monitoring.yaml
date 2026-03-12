@@ -2,14 +2,14 @@
 apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDashboard
 metadata:
-  name: prometheus-metrics
+  name: prometheus-monitoring-dashboard
   namespace: prometheus
 spec:
-  folder: "Monitoring"
-  resyncPeriod: 30m
   instanceSelector:
     matchLabels:
       dashboards: "grafana"
-  configMapRef:
-    name: prometheus-monitoring-dashboard
-    key: json 
+  grafanaCom:
+    id: 19268
+    # Revision 1 is usually the latest if not specified, 
+    # but you can check grafana.com/dashboards/19268/revisions
+    revision: 1
