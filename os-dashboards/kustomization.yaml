@@ -25,6 +25,9 @@ configMapGenerator:
   - name: os-dashboards-pf-threat-impossible-login
     files:
       - os-dashboard-pf-threat-impossible-login.ndjson
+  - name: os-dashboards-json-parse-failures
+    files:
+      - os-dashboard-json-parse-failures.ndjson
 
 generatorOptions:
   annotations:
